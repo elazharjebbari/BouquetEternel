@@ -1,10 +1,172 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'handicrat/base.html' %}
 
-</body>
-</html>
+{% block title %}Handicraft  - Responsive HTML Template{% endblock title %}
+
+{% block meta_header %}
+
+{% endblock meta_header %}
+
+{% block extra_css %}
+{% endblock extra_css %}
+
+{% block extra_head %}
+
+
+{% endblock extra_head %}
+
+{% block content %}
+        <!--top_header start-->
+        <div class="hm_home_style1 hm_home_style3">
+            <!--menu start-->
+            {% include 'handicrat/components/menu_wapper.html' %}
+            {% include 'handicrat/components/banner.html' %}
+            <!--banner start-->
+            <!--About section start-->
+            {% include 'handicrat/components/about_wrapper.html' %}
+            <!--New Arrivals section start-->
+            {% include 'handicrat/components/arrivals_wrapper.html' %}
+            <!--Choose section start-->
+            {% include 'handicrat/components/choose_wrapper.html' %}
+            <!--our artist section start-->
+            {% include 'handicrat/components/artist_wrapper.html' %}
+            <!--happy customer sevtion start-->
+            {% include 'handicrat/components/testimonial_wrapper.html' %}
+            <!--our blog section start-->
+            {% include 'handicrat/components/news_wrapper.html' %}
+            <!--our partners section start-->
+            {% include 'handicrat/components/partners_wrapper.html' %}
+            <!--footer start-->
+            {% include 'handicrat/components/footer_wrapper.html' %}
+            <!--bottom footer start-->
+            {% include 'handicrat/components/bottom_footer.html' %}
+
+        </div>
+
+{% endblock content %}
+
+{% block before_end_body %}
+
+{% endblock before_end_body %}
+
+{% block js %}
+    <!--<script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            window.dataLayer = window.dataLayer || [];
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////
+            // Gestion Formualire
+            ////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+            // Sélectionnez tous les boutons avec la classe `openLeadModal`
+            const leadModalBtns = document.querySelectorAll('.openLeadModal');
+
+            leadModalBtns.forEach(btn => {
+                btn.addEventListener('click', function (event) {
+                    event.preventDefault(); // Empêche le comportement par défaut du lien
+
+                    // Recherchez le modal par son ID
+                    const modalElement = document.querySelector('#leadModal');
+                    if (modalElement) {
+                        // Ouvrez le modal Bootstrap
+                        const leadModalInstance = new bootstrap.Modal(modalElement);
+                        leadModalInstance.show();
+                    }
+                });
+            });
+
+            const submitLeadButton = document.getElementById('submitLead');
+
+            if (submitLeadButton) {
+                submitLeadButton.addEventListener('click', function (event) {
+
+
+                    event.preventDefault();
+
+                    const form = document.getElementById('leadForm');
+                    const formData = new FormData(form);
+
+                    fetch("{%comment%}{% url 'create_lead_api' %}{%endcomment%}", {
+                        method: 'POST',
+                        headers: {
+                            'X-CSRFToken': form.querySelector('[name=csrfmiddlewaretoken]').value,
+                            'X-Requested-With': 'XMLHttpRequest',
+                        },
+                        body: formData,
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                // Succès : afficher un message
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: '{%comment%}{% trans "Demande enregistrée !" %}{%endcomment%}',
+                                    text: data.message,
+                                    confirmButtonText: 'OK'
+                                });
+
+                                form.reset(); // Réinitialiser le formulaire
+                                var leadModal = bootstrap.Modal.getInstance(document.getElementById('leadModal'));
+                                leadModal.hide(); // Fermer le modal
+
+                                window.dataLayer.push({
+                                    'event': 'FormSubmit',
+                                    'uniqueId': 'res_' + Date.now(),  // Ajout de l'identifiant unique
+                                });
+                            } else {
+                                // Erreur : afficher les messages d'erreur
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: '{%comment%}{% trans "Erreur" %}{%endcomment%}',
+                                    html: data.message,
+                                    confirmButtonText: 'OK'
+                                });
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Erreur:', error);
+                            Swal.fire({
+                                icon: 'error',
+                                title: '{%comment%}{% trans "Oups ! Une erreur est survenue." %}{%endcomment%}',
+                                text: '{%comment%}{% trans "Veuillez réessayer plus tard." %}{%endcomment%}',
+                                confirmButtonText: 'OK'
+                            });
+                        });
+                });
+            }
+
+        });
+
+function toggleMenu() {
+    const menu = document.getElementById('chatMenu');
+    const icon = document.querySelector('.chat-icon i');
+    const label = document.querySelector('.chat-label');
+
+    if (menu.style.display === 'block') {
+        menu.style.animation = 'slideIn 0.5s ease-in-out reverse';
+        setTimeout(() => {
+            menu.style.display = 'none';
+            icon.className = 'fa fa-comments'; // Remettre l’icône de commentaire
+            label.textContent =  "{%comment%}{% trans 'Besoin d\'aide ?' %}{%endcomment%}";
+        }, 500);
+    } else {
+        menu.style.display = 'block';
+        menu.style.animation = 'slideIn 0.5s ease-in-out';
+        icon.className = 'fa fa-times'; // Changer l’icône en croix
+        label.textContent = "{%comment%}{% trans 'Fermer le menu' %}{%endcomment%}";
+    }
+}
+
+
+        function openWhatsApp() {
+            window.open('https://wa.me/212630035905', '_blank');
+        }
+
+        function openCall() {
+            window.location.href = 'tel:212630035905';
+        }
+
+    </script>-->
+{% endblock js %}

@@ -4,4 +4,4 @@ from django.shortcuts import render
 def views_home(request):
 
     # Récupérer les sections avec les conférences ordonnées
-    return render(request, 'handicrat/base.html')
+    return render(request, 'handicrat/screens/home.html')
