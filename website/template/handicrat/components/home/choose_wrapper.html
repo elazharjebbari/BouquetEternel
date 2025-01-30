@@ -1,79 +1,155 @@
 {% load static %}
 
+<style>
+    .hm_choose_wrapper {
+        position: relative;
+        background: url('{% static "handicraft/assets/images/choose_bg.jpg" %}') no-repeat center center/cover;
+        padding: 100px 0;
+        color: white;
+        text-align: center;
+    }
 
+    .hm_choose_wrapper::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Overlay pour améliorer la lisibilité */
+    }
+
+    .hm_choose_data {
+        position: relative;
+        z-index: 2;
+    }
+
+    .accordion-button {
+        background: transparent;
+        color: white;
+        font-weight: bold;
+    }
+
+    .accordion-body {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 15px;
+    }
+
+</style>
+<!-- Section Why Choose Us -->
 <div class="hm_choose_wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-12">
+    <div class="container">
+        <div class="row">
+            <!-- Contenu avec fond en image -->
+            <div class="col-lg-12 col-md-12 text-center position-relative text-white">
+                <div class="hm_choose_data">
+                    <h1 class="hm_heading text-left"><span class="hm_color">Pourquoi </span>Nous Choisir ?</h1>
+                    <div class="hm_choose_list">
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
 
-                    </div>
-                    <div class="col-lg-8 col-md-12 pull-right padding_left">
-                        <div class="hm_choose_data">
-                            <h1 class="hm_heading text-left"><span class="hm_color">why </span>Choose Us</h1>
-                            <div class="hm_choose_list">
-                                <div class="accordion accordion-flush" id="accordionFlushExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingOne">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-       <h4>Respecting Your Time</h4>
-      </button>
-    </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et do lore magna aliqua.Lonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</div>
-    </div>
-  </div>
-  <!--  -->
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-       <h4>Latest In Technology</h4>
-      </button>
-    </h2>
-    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et do lore magna aliqua.Lonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</div>
-    </div>
-  </div>
-  <!--  -->
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingThree">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-      <h4>Professional Staff</h4>
-      </button>
-    </h2>
-    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-
-      <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et do lore magna aliqua.Lonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</div>
-    </div>
-  </div>
-  <!--  -->
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingFour">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-     <h4>Free Home Dilevery</h4>
-      </button>
-    </h2>
-    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-
-      <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et do lore magna aliqua.Lonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</div>
-    </div>
-  </div>
-  <!--  -->
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingFive">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-      <h4>High Quality</h4>
-      </button>
-    </h2>
-    <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-
-      <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et do lore magna aliqua.Lonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</div>
-    </div>
-  </div>
-</div>
-
+                            <!-- Édition Limitée -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                            aria-controls="flush-collapseOne">
+                                        <i class="fas fa-gem accordion-icon"></i> <strong>Édition Limitée &
+                                        Exclusivité</strong>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse show"
+                                     aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        Nos bougies-bouquets sont conçus en <u>séries limitées</u>, garantissant une
+                                        exclusivité absolue et un charme unique pour chaque création.
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+
+                            <!-- Artisanat d’Exception -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                            aria-controls="flush-collapseTwo">
+                                        <i class="fas fa-hands accordion-icon"></i> <strong>Un Artisanat
+                                        d’Exception</strong>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                     aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        Chaque pièce est fabriquée à la main, avec une sélection minutieuse de
+                                        cire naturelle pour une <u>finition parfaite</u> et une combustion
+                                        propre.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Lumière Éternelle -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                            aria-controls="flush-collapseThree">
+                                        <i class="fas fa-lightbulb accordion-icon"></i> <strong>Une Lumière
+                                        Éternelle</strong>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                     aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        Nos créations sont conçues pour briller à jamais, vous offrant une <u>présence
+                                        lumineuse intemporelle</u> et pleine de sens.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Expérience Sensorielle -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                            aria-controls="flush-collapseFour">
+                                        <i class="fas fa-leaf accordion-icon"></i> <strong>Expérience Sensorielle
+                                        Unique</strong>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                     aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        Plongez dans un voyage olfactif captivant avec des parfums inspirés des
+                                        <u>plus belles essences naturelles</u> et des souvenirs précieux.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Cadeau Inoubliable -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                            aria-controls="flush-collapseFive">
+                                        <i class="fas fa-gift accordion-icon"></i> <strong>Offrez un Cadeau
+                                        Inoubliable</strong>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                     aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        Une attention unique qui symbolise <u>l’amour, l’élégance et l’émotion</u>.
+                                        Le cadeau idéal pour immortaliser les moments importants.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div> <!-- Fin de l'accordéon -->
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+

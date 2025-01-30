@@ -15,32 +15,35 @@
 {% endblock extra_head %}
 
 {% block content %}
-        <!--top_header start-->
-        <div class="hm_home_style1 hm_home_style3">
-            <!--menu start-->
-            {% include 'handicrat/components/home/menu_wapper.html' %}
-            {% include 'handicrat/components/home/banner.html' %}
-            <!--banner start-->
-            <!--About section start-->
-            {% include 'handicrat/components/home/about_wrapper.html' %}
-            <!--New Arrivals section start-->
-            {% include 'handicrat/components/home/arrivals_wrapper.html' %}
-            <!--Choose section start-->
-            {% include 'handicrat/components/home/choose_wrapper.html' %}
-            <!--our artist section start-->
-            {% include 'handicrat/components/home/artist_wrapper.html' %}
-            <!--happy customer sevtion start-->
-            {% include 'handicrat/components/home/testimonial_wrapper.html' %}
-            <!--our blog section start-->
-            {% include 'handicrat/components/home/news_wrapper.html' %}
-            <!--our partners section start-->
-            {% include 'handicrat/components/home/partners_wrapper.html' %}
-            <!--footer start-->
-            {% include 'handicrat/components/home/footer_wrapper.html' %}
-            <!--bottom footer start-->
-            {% include 'handicrat/components/home/bottom_footer.html' %}
 
-        </div>
+    <!--top_header start-->
+    <div class="hm_home_style1 hm_home_style3">
+
+        <!--menu start-->
+        {% include 'handicrat/components/home/menu_wapper.html' %}
+
+        {% include 'handicrat/components/home/banner.html' %}
+        <!--banner start-->
+
+        <!--About section start-->
+        {% include 'handicrat/components/home/about_wrapper.html' %}
+
+        <!--New Arrivals section start-->
+        {% include 'handicrat/components/home/arrivals_wrapper.html' %}
+
+        <!--Choose section start-->
+        {% include 'handicrat/components/home/choose_wrapper.html' %}
+
+        <!--our partners section start-->
+        {% include 'handicrat/components/home/partners_wrapper.html' %}
+
+{#        <!--footer start-->#}
+{#        {% include 'handicrat/components/home/footer_wrapper.html' %}#}
+{##}
+{#        <!--bottom footer start-->#}
+{#        {% include 'handicrat/components/home/bottom_footer.html' %}#}
+
+    </div>
 
 {% endblock content %}
 
