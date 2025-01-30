@@ -1,0 +1,120 @@
+{% load static %}
+
+<div class="contact_form_wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Colonne pour la carte -->
+            <div class="col-lg-6 col-md-6 padding_left padding_right">
+                <div class="contact_map">
+                    <div id="contact_map">
+                        <div class="col-lg-12 col-md-12">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.9279824501114!2d-6.831616800000001!3d34.020059499999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76b62d7669bc3%3A0xeedf82994aca610!2sLumieresAcademy!5e0!3m2!1sfr!2sfr!4v1707555734231!5m2!1sfr!2sfr"
+                                style="border:0; width:100%; height:400px;"
+                                allowfullscreen=""
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colonne pour le formulaire -->
+            <div class="col-lg-6 col-md-6 padding_right padding_left">
+                <div class="hm_form">
+                    <div class="col-lg-10 col-md-12">
+                        <h1 class="text-white">Envoyer un message</h1>
+                        <form class="form-inline">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" class="form-control w-100" id="name" placeholder="Nom" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="email" class="form-control w-100" id="email" placeholder="Email" required>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" class="form-control w-100" id="number" placeholder="Téléphone">
+                                </div>
+                                <!--<div class="col-md-6 form-group">
+                                    <input type="text" class="form-control w-100" id="subject" placeholder="Sujet">
+                                </div>-->
+                            </div>
+                            <!--<div class="form-group mt-2">
+                                <textarea class="form-control w-100" rows="4" id="message" placeholder="Message" required></textarea>
+                            </div>-->
+                            <div class="con_btn mt-3">
+                                <button type="submit" class="btn btn-light w-100">Envoyer</button>
+                            </div>
+                            <p id="err_msg"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="contact_form_wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 padding_left padding_right">
+                <div class="contact_map">
+                    <div id="contact_map">
+                         <div class="col-lg-4 col-md-12">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.9279824501114!2d-6.831616800000001!3d34.020059499999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76b62d7669bc3%3A0xeedf82994aca610!2sLumieresAcademy!5e0!3m2!1sfr!2sfr!4v1707555734231!5m2!1sfr!2sfr"
+                                style="border:0; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                        </iframe></div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 padding_right padding_left">s
+                <div class="hm_form">
+
+                    <div class="col-lg-8 col-md-12">
+                        <h1>send a message</h1>
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="number" placeholder="Phone">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="subject" placeholder="Subject">
+                            </div>
+                            <div class="form-group textarea">
+                                <textarea class="form-control" rows="3" id="message" placeholder="Message"></textarea>
+                            </div>
+                            <div class="con_btn">
+                                <a href="javascript:;" class="hm_btn submit_frm"> submit</a>
+                            </div>
+                            <p id="err_msg"></p>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
